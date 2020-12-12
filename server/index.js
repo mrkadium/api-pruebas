@@ -10,6 +10,7 @@ app.set('port', process.env.PORT || 3000)
 app.use(express.json())
 
 //routes
+app.use('', require('./routes/app.routes'))
 app.use('/api', require('./routes/comidas.routes'))
 app.use('/api', require('./routes/libros.routes'))
 
