@@ -10,7 +10,8 @@ app.set('port', process.env.PORT || 3000)
 app.use(express.json())
 
 //routes
-app.use('/api/comidas', require('./routes/comidas.routes'))
+app.use('/api', require('./routes/comidas.routes'))
+app.use('/api', require('./routes/libros.routes'))
 
 //init server
 app.listen(app.get('port'), () => console.log("SERVER RUNNING"))
